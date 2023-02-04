@@ -6,6 +6,7 @@ import SwiftUI
 import RealmSwift
 
 struct TodoListView: View {
+    // Realm 모델을 데이터를 관찰(?)하는 property wrapper
     @ObservedResults(Todo.self) var todos
     @State var name = ""
     @FocusState private var focus: Bool?
@@ -18,7 +19,10 @@ struct TodoListView: View {
                         .textFieldStyle(.roundedBorder)
                     Spacer()
                     Button {
+                        /// 모델에 데이터 추가
                         let newTodo = Todo(name: name)
+                        /// 추가한 데이터를 Realm에 추가
+                        ///  아마도 이부분이 Realm. write의 기능을 담당하는 듯
                         $todos.append(newTodo)
                         name = ""
                     } label: {
@@ -29,8 +33,9 @@ struct TodoListView: View {
                 .padding()
                 List() {
                     ForEach(todos) { todo in
-                        Text(todo.name)
+                        TodoListRow(todo: todo)
                     }
+                    .onDelete(perform: $todos.remove)
                     .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)

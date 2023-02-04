@@ -14,6 +14,7 @@ struct SwiftUI_RealmApp: App {
             ContentView()
                 .onAppear {
                     print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
+                    UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
                 }
         }
     }
