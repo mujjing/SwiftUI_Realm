@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9127060298FEB2B00AB2D34 /* RealmTestJson.json in Resources */ = {isa = PBXBuildFile; fileRef = A912705F298FEB2B00AB2D34 /* RealmTestJson.json */; };
+		A9127062298FEDBA00AB2D34 /* JsonTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9127061298FEDBA00AB2D34 /* JsonTestModel.swift */; };
+		A9127064298FEE3600AB2D34 /* JsonTestRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9127063298FEE3600AB2D34 /* JsonTestRealmModel.swift */; };
+		A9127066298FEF6900AB2D34 /* JsonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9127065298FEF6900AB2D34 /* JsonView.swift */; };
+		A9127068298FF4D500AB2D34 /* JsonTestListRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9127067298FF4D500AB2D34 /* JsonTestListRealmModel.swift */; };
+		A912706B298FFA2E00AB2D34 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912706A298FFA2E00AB2D34 /* RealmManager.swift */; };
 		A9F2DDF5298E919800EE3F37 /* SwiftUI_RealmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2DDF4298E919800EE3F37 /* SwiftUI_RealmApp.swift */; };
 		A9F2DDF7298E919800EE3F37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2DDF6298E919800EE3F37 /* ContentView.swift */; };
 		A9F2DDF9298E919800EE3F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F2DDF8298E919800EE3F37 /* Assets.xcassets */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A912705F298FEB2B00AB2D34 /* RealmTestJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RealmTestJson.json; sourceTree = "<group>"; };
+		A9127061298FEDBA00AB2D34 /* JsonTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTestModel.swift; sourceTree = "<group>"; };
+		A9127063298FEE3600AB2D34 /* JsonTestRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTestRealmModel.swift; sourceTree = "<group>"; };
+		A9127065298FEF6900AB2D34 /* JsonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonView.swift; sourceTree = "<group>"; };
+		A9127067298FF4D500AB2D34 /* JsonTestListRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTestListRealmModel.swift; sourceTree = "<group>"; };
+		A912706A298FFA2E00AB2D34 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		A9F2DDF1298E919800EE3F37 /* SwiftUI_Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Realm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F2DDF4298E919800EE3F37 /* SwiftUI_RealmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_RealmApp.swift; sourceTree = "<group>"; };
 		A9F2DDF6298E919800EE3F37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9127069298FFA1C00AB2D34 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A912706A298FFA2E00AB2D34 /* RealmManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		A9F2DDE8298E919700EE3F37 = {
 			isa = PBXGroup;
 			children = (
@@ -61,11 +81,13 @@
 		A9F2DDF3298E919800EE3F37 /* SwiftUI_Realm */ = {
 			isa = PBXGroup;
 			children = (
+				A9127069298FFA1C00AB2D34 /* Manager */,
 				A9F2DE0A298E998400EE3F37 /* View */,
 				A9F2DE07298E93D200EE3F37 /* Models */,
 				A9F2DDF4298E919800EE3F37 /* SwiftUI_RealmApp.swift */,
 				A9F2DDF6298E919800EE3F37 /* ContentView.swift */,
 				A9F2DDF8298E919800EE3F37 /* Assets.xcassets */,
+				A912705F298FEB2B00AB2D34 /* RealmTestJson.json */,
 				A9F2DDFA298E919800EE3F37 /* Preview Content */,
 			);
 			path = SwiftUI_Realm;
@@ -83,6 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				A9F2DE08298E93E100EE3F37 /* Todo.swift */,
+				A9127061298FEDBA00AB2D34 /* JsonTestModel.swift */,
+				A9127063298FEE3600AB2D34 /* JsonTestRealmModel.swift */,
+				A9127067298FF4D500AB2D34 /* JsonTestListRealmModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +117,7 @@
 			children = (
 				A9F2DE0B298E998F00EE3F37 /* TodoListView.swift */,
 				A9F2DE0D298EA0E000EE3F37 /* TodoListRow.swift */,
+				A9127065298FEF6900AB2D34 /* JsonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9127060298FEB2B00AB2D34 /* RealmTestJson.json in Resources */,
 				A9F2DDFC298E919800EE3F37 /* Preview Assets.xcassets in Resources */,
 				A9F2DDF9298E919800EE3F37 /* Assets.xcassets in Resources */,
 			);
@@ -174,9 +201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F2DDF7298E919800EE3F37 /* ContentView.swift in Sources */,
+				A9127064298FEE3600AB2D34 /* JsonTestRealmModel.swift in Sources */,
+				A9127068298FF4D500AB2D34 /* JsonTestListRealmModel.swift in Sources */,
+				A9127062298FEDBA00AB2D34 /* JsonTestModel.swift in Sources */,
 				A9F2DE09298E93E100EE3F37 /* Todo.swift in Sources */,
 				A9F2DE0E298EA0E000EE3F37 /* TodoListRow.swift in Sources */,
 				A9F2DE0C298E998F00EE3F37 /* TodoListView.swift in Sources */,
+				A912706B298FFA2E00AB2D34 /* RealmManager.swift in Sources */,
+				A9127066298FEF6900AB2D34 /* JsonView.swift in Sources */,
 				A9F2DDF5298E919800EE3F37 /* SwiftUI_RealmApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
