@@ -19,6 +19,7 @@ struct JsonView: View {
         }
         .onAppear {
             readFromJsonFile()
+//            readFromSampleJsonFile()
         }
     }
 }
@@ -38,6 +39,21 @@ extension JsonView {
             print("에러 :\(error)")
         }
     }
+//    
+//    func readFromSampleJsonFile() {
+//        guard let path = Bundle.main.url(forResource: "SampleJson", withExtension: "json") else { return }
+//        do {
+//            let data = try Data(contentsOf: path)
+//            let result = try JSONDecoder().decode([JsonTestModel].self, from: data)
+//
+//            print("결과 : \(result)")
+//            for data in result {
+//                realmManager.saveToRealmFromSample(data)
+//            }
+//        } catch {
+//            print("에러 :\(error)")
+//        }
+//    }
 }
 
 struct JsonView_Previews: PreviewProvider {

@@ -7,10 +7,13 @@ import RealmSwift
 
 class JsonTestListRealmModel: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId // primary key defalut값은 false
-    @Persisted var listModel = RealmSwift.List<JsonTestRealmModel>()
+    @Persisted var jsonListModel = RealmSwift.List<JsonTestRealmModel>()
+    @Persisted var listSaveModel = RealmSwift.List<ListSaveRealmModel>()
     
-    convenience init(listModel: [JsonTestRealmModel]) {
+    convenience init(listModel: [JsonTestRealmModel], listSaveModel: [ListSaveRealmModel]) {
         self.init()
-        self.listModel.append(objectsIn: listModel)
+        
+        self.jsonListModel.append(objectsIn: listModel)
+        self.listSaveModel.append(objectsIn: listSaveModel)
     }
 }

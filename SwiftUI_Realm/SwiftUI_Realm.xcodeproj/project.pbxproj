@@ -22,6 +22,8 @@
 		A9F2DE09298E93E100EE3F37 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2DE08298E93E100EE3F37 /* Todo.swift */; };
 		A9F2DE0C298E998F00EE3F37 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2DE0B298E998F00EE3F37 /* TodoListView.swift */; };
 		A9F2DE0E298EA0E000EE3F37 /* TodoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2DE0D298EA0E000EE3F37 /* TodoListRow.swift */; };
+		A9FEBBA6299558D30032C10F /* ListSaveRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FEBBA5299558D30032C10F /* ListSaveRealmModel.swift */; };
+		A9FEBBA829955B4A0032C10F /* SampleJson.json in Resources */ = {isa = PBXBuildFile; fileRef = A9FEBBA729955B4A0032C10F /* SampleJson.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		A9F2DE08298E93E100EE3F37 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		A9F2DE0B298E998F00EE3F37 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		A9F2DE0D298EA0E000EE3F37 /* TodoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRow.swift; sourceTree = "<group>"; };
+		A9FEBBA5299558D30032C10F /* ListSaveRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSaveRealmModel.swift; sourceTree = "<group>"; };
+		A9FEBBA729955B4A0032C10F /* SampleJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleJson.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 				A9F2DDF6298E919800EE3F37 /* ContentView.swift */,
 				A9F2DDF8298E919800EE3F37 /* Assets.xcassets */,
 				A912705F298FEB2B00AB2D34 /* RealmTestJson.json */,
+				A9FEBBA729955B4A0032C10F /* SampleJson.json */,
 				A9F2DDFA298E919800EE3F37 /* Preview Content */,
 			);
 			path = SwiftUI_Realm;
@@ -108,6 +113,7 @@
 				A9127061298FEDBA00AB2D34 /* JsonTestModel.swift */,
 				A9127063298FEE3600AB2D34 /* JsonTestRealmModel.swift */,
 				A9127067298FF4D500AB2D34 /* JsonTestListRealmModel.swift */,
+				A9FEBBA5299558D30032C10F /* ListSaveRealmModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +196,7 @@
 				A9127060298FEB2B00AB2D34 /* RealmTestJson.json in Resources */,
 				A9F2DDFC298E919800EE3F37 /* Preview Assets.xcassets in Resources */,
 				A9F2DDF9298E919800EE3F37 /* Assets.xcassets in Resources */,
+				A9FEBBA829955B4A0032C10F /* SampleJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +214,7 @@
 				A9F2DE09298E93E100EE3F37 /* Todo.swift in Sources */,
 				A9F2DE0E298EA0E000EE3F37 /* TodoListRow.swift in Sources */,
 				A9F2DE0C298E998F00EE3F37 /* TodoListView.swift in Sources */,
+				A9FEBBA6299558D30032C10F /* ListSaveRealmModel.swift in Sources */,
 				A912706B298FFA2E00AB2D34 /* RealmManager.swift in Sources */,
 				A9127066298FEF6900AB2D34 /* JsonView.swift in Sources */,
 				A9F2DDF5298E919800EE3F37 /* SwiftUI_RealmApp.swift in Sources */,

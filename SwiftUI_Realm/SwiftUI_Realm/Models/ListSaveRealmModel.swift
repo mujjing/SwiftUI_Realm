@@ -1,17 +1,16 @@
 //
-//  JsonTestRealmModel.swift
+//  ListSaveRealmModel.swift
 //
 
 import SwiftUI
 import RealmSwift
 
-class JsonTestRealmModel: EmbeddedObject, ObjectKeyIdentifiable {
-    @Persisted(primaryKey: false) var id: ObjectId // primary key defalut값은 false
+class ListSaveRealmModel: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) var id: ObjectId // primary key defalut값은 false
     @Persisted var symbol: String
     @Persisted var name: String
     @Persisted var type: String
     @Persisted var primary: Bool
-    let listModel = LinkingObjects(fromType: JsonTestListRealmModel.self, property: "jsonListModel")
 
     
     convenience init(symbol: String, name: String, type: String, primary: Bool) {

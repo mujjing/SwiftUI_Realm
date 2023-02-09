@@ -16,7 +16,7 @@ class RealmManager: ObservableObject {
     
     func openRealm() {
         do {
-            let config = Realm.Configuration(schemaVersion: 1)
+            let config = Realm.Configuration(schemaVersion: 10)
             Realm.Configuration.defaultConfiguration = config
             
             localRealm = try Realm()
@@ -31,9 +31,14 @@ class RealmManager: ObservableObject {
             do {
                 try localRealm.write {
                     let newResult = JsonTestRealmModel(symbol: result.symbol, name: result.name, type: result.type, primary: result.primary)
+                    let newListResult = ListSaveRealmModel(symbol: result.symbol, name: result.name, type: result.type, primary: result.primary)
+                    
                     let newResultList = JsonTestListRealmModel()
-                    newResultList.listModel.append(newResult)
-                    localRealm.add(newResultList)
+                    
+                    newResultList.jsonListModel.append(newResult)
+                    newResultList.listSaveModel.append(newListResult)
+                    
+                    localRealm.add(newResultList, update: .modified)
                     getTasks()
                     print("realm 저장 완료")
                 }
@@ -42,6 +47,25 @@ class RealmManager: ObservableObject {
             }
         }
     }
+    
+//    func saveToRealmFromSample(_ result: JsonTestModel) {
+//        if let localRealm = localRealm {
+//            do {
+//                try localRealm.write {
+//                    let newListResult = ListSaveRealmModel(symbol: result.symbol, name: result.name, type: result.type, primary: result.primary)
+//                    let newResultList = JsonTestListRealmModel()
+//
+//                    newResultList.listSaveModel.append(newListResult)
+//
+//                    localRealm.add(newResultList, update: .modified)
+//                    getTasks()
+//                    print("realm 저장 완료")
+//                }
+//            } catch {
+//                print("Error save Realm: \(error)")
+//            }
+//        }
+//    }
     
     func getTasks() {
         if let localRealm = localRealm {

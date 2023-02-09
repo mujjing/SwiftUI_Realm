@@ -1,0 +1,26 @@
+[
+    {
+        "symbol": "sampl1",
+        "name": "sample file1",
+        "type": "good",
+        "primary": true
+    },
+    {
+        "symbol": "sampl2",
+        "name": "sample file2",
+        "type": "good",
+        "primary": false
+    },
+    {
+        "symbol": "sampl3",
+        "name": "sample file3",
+        "type": "bad",
+        "primary": false
+    },
+    {
+        "symbol": "sampl4",
+        "name": "sample file4",
+        "type": "bad",
+        "primary": false
+    }
+]
